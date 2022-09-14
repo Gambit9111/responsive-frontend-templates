@@ -1,1 +1,1 @@
-# django-starting-template
+# Django-Responsive-Templates
