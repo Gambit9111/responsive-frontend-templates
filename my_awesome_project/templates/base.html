@@ -26,8 +26,9 @@
   {# Placed at the top of the document so pages load faster with defer #}
   {% block javascript %}
   <!-- Bootstrap v5.2.1 (https://getbootstrap.com/) -->
-  <script defer src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!-- Your stuff: Third-party javascript libraries go here -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- place project specific Javascript in this file -->
   <script defer src="{% static 'js/project.js' %}"></script>
@@ -37,44 +38,6 @@
 </head>
 
 <body>
-
-  <div class="mb-1">
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
-      <div class="container-fluid">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand" href="#">My Awesome Project</a>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="visually-hidden">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link"
-                href="#">My Profile</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Sign Out</a>
-            </li>
-            <li class="nav-item">
-              <a id="sign-up-link" class="nav-link" href="#">Sign Up</a>
-            </li>
-            <li class="nav-item">
-              <a id="log-in-link" class="nav-link" href="#">Sign In</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-  </div>
 
   <div class="container">
 
@@ -88,7 +51,6 @@
     {% endif %}
 
     {% block content %}
-    <p>Use this document as a way to quick start any new project.</p>
     {% endblock content %}
 
   </div> <!-- /container -->

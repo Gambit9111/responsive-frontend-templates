@@ -11,6 +11,7 @@ from django.urls import path
 
 urlpatterns = [
     path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
+    path("1-financial-mobile-app/", TemplateView.as_view(template_name="1-financial-mobile-app/main.html"), name="1-financial-mobile-app"),
     path("about/", TemplateView.as_view(template_name="pages/about.html"), name="about"),
 
     # Django Admin, use {% url 'admin:index' %}
